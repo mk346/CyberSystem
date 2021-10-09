@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container-8">
+{% if Fname %}
+	  <center>
+	    <h3>Thanks {{Fname}}</h3>
+	    <p>We Received Your Message and The Next Available Agent Will Respond Shortly</p>
+	  </center>
+      <br/><br><br><br><br/>
+      <br/><br><br><br><br/>
+      <br/><br><br><br><br/>
+      <br/><br><br><br><br/>
+{% else %}
+		<h3>Contact Form</h3>
+		<div class="form-container">
+			<form action="" method="post" class="form-control form-control-sm">
+			{% csrf_token %}
+			{{form.as_p}}
+			<div class="col-auto">
+               <button type="submit" class="btn btn-primary mb-3">Submit</button>
+            </div>
+           </form>
+		</div>
+{% endif %}
+    <br/><br><br/>
+</div>
+
+
+{% endblock content %}

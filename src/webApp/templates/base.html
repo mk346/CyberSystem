@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Venric Consultance</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'webApp/css/style.css' %}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{% static 'webApp/js/media.js' %}"></script>
+</head>
+
+<body>
+	<div class="nav-container">
+	 <nav>
+		<ul id="menu-items">
+			<li><a href="{% url 'home' %}">Home</a></li>
+			<li><a href="">KRA Services</a>
+				<ul>
+					<li><a href="{% url 'form' %}">Individual Return</a></li>
+					<li><a href="{% url 'form' %}">Company Tax Return</a></li>
+					<li><a href="{% url 'form' %}">VAT Return Filing</a></li>
+					<li><a href="{% url 'form' %}">PAYE Return Filing</a></li>
+					<li><a href="{% url 'registration' %}">KRA Pin Registration</a></li>
+					<li><a href="{% url 'change' %}">Change of KRA Email</a></li>
+				</ul>
+			</li>
+			<li><a href="">NTSA Services</a>
+				<ul>
+					<li><a href="{% url 'application' %}">Renew Driving Licence</a></li>
+				</ul>
+
+			</li>
+			<li><a href="{% url 'application' %}">Immigration Services</a>
+				<ul>
+					<li><a href="{% url 'application' %}">Temporary Permit</a></li>
+					<li><a href="{% url 'application' %}">PassPort Application</a></li>
+				</ul>
+            </li>
+            <li><a href="">Other Services</a>
+				<ul>
+					<li><a href="{% url 'other' %}">Business Cards Design</a></li>
+					<li><a href="{% url 'other' %}">Invoice Cards Design</a></li>
+					<li><a href="{% url 'other' %}">Delivery Cards Design</a></li>
+					<li><a href="{% url 'other' %}">Wedding Cards</a></li>
+					<li><a href="{% url 'other' %}">Funeral Cards Design</a></li>
+					<li><a href="{% url 'other' %}">Banners Design</a></li>
+				</ul>
+            </li>
+			<li><a href="{% url 'contact' %}">Contact</a></li>
+		</ul>
+		<img src="{% static 'mywebapp/images/menu.png' %}" class="menu" onclick="menutoggle()">
+	 </nav>
+	 <br/><br><br>
+	</div>
+{% block content %}
+{% endblock content%}
+
+<!---Footer--->
+
+<div class="footer">
+<div class="container">
+  <div class="row">
+    <div class="footer-col-1">
+        <h5><a href="">VENRIC CONSULTANTS CYBER SERVICES</a></h5>
+        <div class="app-logo">
+         <img src="{% static 'webApp/images/1.png' %}" width="140">
+        </div>
+      </div>
+      <div class="footer-col-2">
+       <p><strong>Contact Us:Via </strong> 0798 693 696/0790 870 639 <br> OR </p>
+       <p><strong>Email Us:@ </strong> venricconsultants@gmail.com</p>  
+      </div>
+      <div class="footer-col-3 ">
+        <h5>Useful Links</h5>
+        <ul>
+            <li><a href="{% url 'registration' %}">KRA Pin Registration</a></li>
+            <li><a href="{% url 'form' %}">Individual Tax Return</a></li>
+            <li><a href="{% url 'form' %}">VAT Tax Return Filling</a></li> 
+            <li><a href="{% url 'application' %}">Passport Application</a></li>                   
+         </ul>
+      </div>
+      <div class="footer-col-4 ">
+        <h5>Other Links</h5>
+        <ul>
+            <li><a href="{% url 'application' %}">Temporary Permit Application</a></li>
+            <li><a href="{% url 'other' %}">Business Cards Design</a></li>
+            <li><a href="{% url 'other' %}">Invoice Cards Design</a></li>
+            <li><a href="{% url 'other' %}">Wedding Cards Design</a></li>                               
+        </ul>
+      </div>
+  </div>
+  <div class="flex-box-container-5">
+   <a href=""><img src="{% static 'webApp/images/faceb.png' %}" width="90"></a>
+   <a href=""><img src="{% static 'webApp/images/twitt.png' %}" width="90"></a>
+   <a href=""><img src="{% static 'webApp/images/insta.png' %}" width="90"></a>
+   <a href="" ><img src="{% static 'webApp/images/whatapp.png' %}" width="90"></a>
+  </div>
+
+  <hr>
+  <p class="copyright">Copyright <img src="{% static 'webApp/images/c4.png' %}" width="15" >2021 All Rights Reserved @venricconsultants.co.ke  || Designed By @GeekWebers</p>
+  </div>
+</div> 
+
+</body>
+</html>
